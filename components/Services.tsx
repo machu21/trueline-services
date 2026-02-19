@@ -30,7 +30,7 @@ const services = [
   },
   {
     title: "Project Ops",
-    desc: "Managing your Trello, Asana, or ClickUp boards to keep projects on track.",
+    desc: "Managing your CRMs, Dialer and Marketing Platforms to keep projects on track.",
     icon: <Layers className="w-8 h-8" />,
   },
   {
@@ -42,45 +42,52 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="py-24 bg-black relative scroll-mt-20">
+    <section id="services" className="py-24 bg-white relative scroll-mt-20">
       <div className="container mx-auto px-6">
         
         {/* Section Header */}
-        <div className="mb-16">
-          {/* Changed text-green-500 -> text-ice */}
-          <h2 className="text-ice font-mono text-sm tracking-widest uppercase mb-4 drop-shadow-[0_0_5px_rgba(185,255,217,0.3)]">
+        <div className="mb-16 text-center md:text-left">
+          <h2 className="text-emerald-600 font-mono text-sm tracking-widest uppercase mb-4">
             // Our Capabilities
           </h2>
-          <h3 className="text-4xl md:text-5xl font-bold text-white tracking-tight">
+          <h3 className="text-4xl md:text-5xl font-bold text-gray-900 tracking-tight">
             Tailored Solutions for <br />
-            {/* Added a subtle gradient to the sub-heading */}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-500 to-gray-200">Modern Enterprises.</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-500">
+              Modern Enterprises.
+            </span>
           </h3>
         </div>
 
         {/* Services Grid */}
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {services.map((service, index) => (
             <div 
               key={index}
-              className="group relative p-8 bg-dark-card border border-white/5 rounded-2xl transition-all duration-500 hover:border-ice/30 hover:-translate-y-2 overflow-hidden"
+              className="group relative p-8 bg-gray-50 border border-gray-100 rounded-3xl transition-all duration-500 hover:bg-white hover:shadow-[0_20px_50px_rgba(16,185,129,0.1)] hover:-translate-y-2 overflow-hidden"
             >
-              {/* Ice Glow Background on Hover */}
-              <div className="absolute inset-0 bg-ice/0 group-hover:bg-ice/[0.02] transition-colors rounded-2xl" />
-              
+              {/* Subtle hover background decoration */}
+              <div className="absolute top-0 right-0 w-24 h-24 bg-emerald-50 rounded-full -mr-12 -mt-12 transition-transform group-hover:scale-[3] duration-700" />
+
               <div className="relative z-10">
-                {/* Icon Glow using Ice RGB values */}
-                <div className="mb-6 text-gray-500 group-hover:text-ice group-hover:drop-shadow-[0_0_12px_rgba(185,255,217,0.6)] transition-all duration-300">
+                {/* Icon Container: Gray to Emerald */}
+                <div className="mb-6 w-14 h-14 bg-white rounded-2xl shadow-sm flex items-center justify-center text-gray-400 group-hover:text-emerald-600 group-hover:shadow-emerald-100 transition-all duration-300">
                   {service.icon}
                 </div>
                 
-                <h4 className="text-xl font-bold text-white mb-3 group-hover:text-ice transition-colors">
+                {/* Title: Dark Gray to Emerald */}
+                <h4 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-emerald-700 transition-colors">
                   {service.title}
                 </h4>
                 
+                {/* Description: Subtle gray for premium feel */}
                 <p className="text-gray-500 leading-relaxed text-sm font-light">
                   {service.desc}
                 </p>
+
+                {/* Bottom link decoration */}
+                <div className="mt-6 flex items-center text-emerald-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-xs font-bold uppercase tracking-wider">
+                  Learn More <span className="ml-2">→</span>
+                </div>
               </div>
             </div>
           ))}

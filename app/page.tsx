@@ -4,6 +4,8 @@ import Services from "@/components/Services";
 import Contact from "@/components/Contact";
 import About from "@/components/About";
 import Reveal from "@/components/Reveal"; 
+import Clients from "@/components/Clients";
+
 
 export default function Home() {
   return (
@@ -19,8 +21,13 @@ export default function Home() {
         <About />
       </Reveal>
       
+
       <Reveal>
         <Contact />
+      </Reveal>
+
+                 <Reveal>
+        <Clients />
       </Reveal>
 
       <footer className="py-12 border-t border-white/5 bg-[#050505] text-center">
