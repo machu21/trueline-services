@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   title: "Trueline Services | Elite Virtual Assistance for Modern Enterprises",
   description: "High-bandwidth operational partners for growing companies. From executive admin to technical support, we provide precision assistance to scale your business.",
   icons: {
-    icon: "/favicon.ico", // Make sure to add a favicon later!
+    icon: "/favicon.ico", 
   },
 };
 
@@ -26,7 +26,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    // 'scroll-smooth' enables the smooth sliding when clicking Navbar links
+    
     <html lang="en" className="scroll-smooth">
       <body
         className={`

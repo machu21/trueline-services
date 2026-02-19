@@ -3,14 +3,12 @@ import Hero from "@/components/Hero";
 import Services from "@/components/Services";
 import Contact from "@/components/Contact";
 import About from "@/components/About";
-import Reveal from "@/components/Reveal"; // Import your new wrapper
+import Reveal from "@/components/Reveal"; 
 
 export default function Home() {
   return (
     <main className="bg-black min-h-screen selection:bg-ice/30 selection:text-ice">
       <Navbar />
-      
-      {/* Hero usually doesn't need a scroll reveal since it's above the fold */}
       <Hero />
       
       <Reveal>
