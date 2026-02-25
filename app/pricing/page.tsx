@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
-import { Check } from "lucide-react";
+import { Check, Link as LinkIcon } from "lucide-react"; // Rename the icon
+import Link from "next/link"; // Import the actual Next.js Link component
 
 export default function PricingPage() {
   const tiers = [
@@ -24,9 +25,13 @@ export default function PricingPage() {
                   </li>
                 ))}
               </ul>
-              <button className="w-full py-3 bg-ice text-black font-bold rounded-lg hover:bg-white transition-all">
+              {/* Now this uses the Next.js Link component correctly */}
+              <Link 
+                href="/consultation" 
+                className="block w-full py-3 bg-ice text-black text-center font-bold rounded-lg hover:bg-white transition-all"
+              >
                 Select Plan
-              </button>
+              </Link>
             </div>
           ))}
         </div>

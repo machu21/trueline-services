@@ -47,9 +47,7 @@ export default function Services() {
         
         {/* Section Header */}
         <div className="mb-16 text-center md:text-left">
-          <h2 className="text-emerald-600 font-mono text-sm tracking-widest uppercase mb-4">
-            // Our Capabilities
-          </h2>
+
           <h3 className="text-4xl md:text-5xl font-bold text-gray-900 tracking-tight">
             Tailored Solutions for <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-500">

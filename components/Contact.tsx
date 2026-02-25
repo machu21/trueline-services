@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Mail, MapPin, Send, CheckCircle2 } from "lucide-react";
+import { Mail, MapPin, Send, CheckCircle2, Phone } from "lucide-react";
 import { supabase } from "@/lib/supabase"; // Ensure this matches your lib folder structure
 
 export default function Contact() {
@@ -15,7 +15,7 @@ export default function Contact() {
     setError(null);
 
     const formData = new FormData(e.currentTarget);
-    
+
     const { error: supabaseError } = await supabase
       .from("inquiries")
       .insert([
@@ -40,7 +40,7 @@ export default function Contact() {
     <section id="contact" className="py-24 bg-black border-t border-white/5 scroll-mt-20">
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          
+
           {/* Left Side: Text Content */}
           <div>
             <h2 className="text-ice font-mono text-sm tracking-widest uppercase mb-4 drop-shadow-[0_0_5px_rgba(185,255,217,0.3)]">
@@ -52,7 +52,7 @@ export default function Contact() {
             <p className="text-gray-400 text-lg mb-8 leading-relaxed font-light">
               Tell us about your business needs. Our team will match you with a virtual assistant specifically trained for your industry.
             </p>
-            
+
             <div className="space-y-6">
               <div className="flex items-center space-x-4 group">
                 <div className="w-12 h-12 bg-ice/10 border border-ice/20 rounded-xl flex items-center justify-center text-ice group-hover:bg-ice group-hover:text-black transition-all duration-300">
@@ -61,6 +61,16 @@ export default function Contact() {
                 <div>
                   <p className="text-xs text-gray-500 uppercase tracking-widest">Email us</p>
                   <p className="text-gray-200 font-medium">hello@truelineservices.com</p>
+                </div>
+              </div>
+
+              <div className="flex items-center space-x-4 group">
+                <div className="w-12 h-12 bg-ice/10 border border-ice/20 rounded-xl flex items-center justify-center text-ice group-hover:bg-ice group-hover:text-black transition-all duration-300">
+                  <Phone className="w-5 h-5" />
+                </div>
+                <div>
+                  <p className="text-xs text-gray-500 uppercase tracking-widest">Contact</p>
+                  <p className="text-gray-200 font-medium">123123123</p>
                 </div>
               </div>
 
@@ -79,13 +89,13 @@ export default function Contact() {
           {/* Right Side: The Form */}
           <div className="bg-dark-card p-8 rounded-2xl border border-white/5 shadow-2xl relative overflow-hidden">
             <div className="absolute -top-24 -right-24 w-48 h-48 bg-ice/5 blur-[80px] rounded-full" />
-            
+
             {submitted ? (
               <div className="relative z-10 py-12 text-center animate-in fade-in zoom-in duration-500">
                 <CheckCircle2 className="w-16 h-16 text-ice mx-auto mb-6" />
                 <h4 className="text-2xl font-bold text-white mb-2">Message Sent!</h4>
                 <p className="text-gray-400">We&apos;ll be in touch with you shortly.</p>
-                <button 
+                <button
                   onClick={() => setSubmitted(false)}
                   className="mt-8 text-ice text-sm font-mono uppercase tracking-widest hover:underline"
                 >
@@ -97,9 +107,9 @@ export default function Contact() {
                 <div className="grid md:grid-cols-2 gap-5">
                   <div>
                     <label className="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2 font-mono">Full Name</label>
-                    <input 
+                    <input
                       name="full_name"
-                      type="text" 
+                      type="text"
                       required
                       placeholder="You full name"
                       className="w-full bg-black border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-ice focus:ring-1 focus:ring-ice/30 transition-all placeholder:text-gray-700"
@@ -107,16 +117,18 @@ export default function Contact() {
                   </div>
                   <div>
                     <label className="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2 font-mono">Email Address</label>
-                    <input 
+                    <input
                       name="email"
-                      type="email" 
+                      type="email"
                       required
                       placeholder="your-email@company.com"
                       className="w-full bg-black border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-ice focus:ring-1 focus:ring-ice/30 transition-all placeholder:text-gray-700"
                     />
                   </div>
+
+
                 </div>
-                
+
                 <div>
                   <label className="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2 font-mono">Service Needed</label>
                   <div className="relative">
@@ -134,7 +146,7 @@ export default function Contact() {
 
                 <div>
                   <label className="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2 font-mono">Message</label>
-                  <textarea 
+                  <textarea
                     name="message"
                     rows={4}
                     required
@@ -145,7 +157,7 @@ export default function Contact() {
 
                 {error && <p className="text-red-400 text-sm">{error}</p>}
 
-                <button 
+                <button
                   type="submit"
                   disabled={loading}
                   className="group w-full bg-ice hover:bg-white text-black font-bold py-4 rounded-lg transition-all flex items-center justify-center space-x-2 shadow-[0_0_20px_rgba(185,255,217,0.3)] active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed"
