@@ -35,7 +35,7 @@ export default function Hero() {
         </h1>
 
         <p className="max-w-2xl mx-auto mb-10 text-lg text-gray-400 md:text-xl font-light leading-relaxed">
-Fuel your business growth with a high-performing virtual assistants combined with the srategic power of ai systems
+Fuel your business growth with a high-performing virtual assistants combined with the strategic power of ai systems
         </p>
 
         <div className="flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4 justify-center items-center">

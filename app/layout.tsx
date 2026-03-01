@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   title: "Trueline Services | Elite Virtual Assistance for Modern Enterprises",
   description: "High-bandwidth operational partners for growing companies. From executive admin to technical support, we provide precision assistance to scale your business.",
   icons: {
-    icon: "/favicon.ico", 
+    icon: "/truline-logo.ico", 
   },
 };
 
