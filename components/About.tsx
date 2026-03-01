@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ShieldCheck, Cpu, Zap, Globe } from "lucide-react";
+import { ShieldCheck, Cpu, Zap, Globe, Receipt, NfcIcon } from "lucide-react";
 
 export default function About() {
   const pillars = [
@@ -23,6 +23,17 @@ export default function About() {
       desc: "Access the top 1% of virtual professionals worldwide.",
       icon: <Globe className="w-6 h-6 text-ice" />,
     },
+    {
+      title: "No Long-Term Contracts",
+      desc: "Access the top 1% of virtual professionals worldwide.",
+      icon: <Receipt className="w-6 h-6 text-ice" />,
+    },
+    {
+      title: "Centralized Communication & Accountability",
+      desc: "Access the top 1% of virtual professionals worldwide.",
+      icon: <NfcIcon className="w-6 h-6 text-ice" />,
+    },
+
   ];
 
   return (
@@ -40,14 +51,14 @@ export default function About() {
               />
             </div>
             <div className="mt-6">
-                <h4 className="text-xl font-bold text-white">Mel</h4>
-                <p className="text-ice font-mono text-sm tracking-widest uppercase">Founder & CEO</p>
+              <h4 className="text-xl font-bold text-white">Mel</h4>
+              <p className="text-ice font-mono text-sm tracking-widest uppercase">Founder & CEO</p>
             </div>
           </div>
 
           <div>
             <h2 className="text-ice font-mono text-sm tracking-widest uppercase mb-4 drop-shadow-[0_0_5px_rgba(185,255,217,0.3)]">
-              // Why Trueline
+              // Why Choose Us?
             </h2>
             <h3 className="text-4xl md:text-5xl font-bold text-white mb-8">
               Reliability is our <br />

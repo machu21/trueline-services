@@ -55,7 +55,7 @@ export default function Logo({ className = "h-12" }: { className?: string }) {
             {/* The Text Branding */}
             <div className="flex flex-col justify-center">
                 <span className="text-2xl font-black tracking-tighter leading-none italic uppercase text-white">
-                    TRUELINE
+                    TRULINE
                 </span>
                 <span className="text-[#B9FFD9] font-bold tracking-[0.4em] text-[10px] uppercase leading-tight mt-1 brightness-150 saturate-150">
                     SERVICES

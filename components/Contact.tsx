@@ -60,7 +60,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="text-xs text-gray-500 uppercase tracking-widest">Email us</p>
-                  <p className="text-gray-200 font-medium">hello@truelineservices.com</p>
+                  <p className="text-gray-200 font-medium">admin@trulineservicesva.com</p>
                 </div>
               </div>
 

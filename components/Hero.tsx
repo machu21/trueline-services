@@ -28,15 +28,14 @@ export default function Hero() {
         </span>
 
         <h1 className="mb-8 text-5xl font-extrabold tracking-tight text-white lg:text-8xl">
-          Precision Support for <br />
+          Precision Support. Scalable Results <br />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-ice to-white drop-shadow-[0_0_20px_rgba(185,255,217,0.4)]">
-            Trueline Results.
+            The Truline Standard
           </span>
         </h1>
 
         <p className="max-w-2xl mx-auto mb-10 text-lg text-gray-400 md:text-xl font-light leading-relaxed">
-          We provide high-level virtual assistants for growing companies.
-          From admin to specialized technical support—we scale with you.
+Fuel your business growth with a high-performing virtual assistants combined with the srategic power of ai systems
         </p>
 
         <div className="flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4 justify-center items-center">
@@ -44,15 +43,9 @@ export default function Hero() {
             href="/consultation"
             className="px-8 py-4 text-lg font-bold text-black transition-all bg-ice rounded-xl hover:bg-white hover:shadow-[0_0_30px_rgba(185,255,217,0.5)] active:scale-95 inline-block"
           >
-            Book a Consultation
+            Let's get started
           </Link>
 
-          <Link
-            href="/pricing"
-            className="px-8 py-4 text-lg font-bold text-white transition-all border border-white/10 rounded-xl hover:bg-white/5 hover:border-ice/50 active:scale-95 inline-block"
-          >
-            View Pricing
-          </Link>
         </div>
       </div>
     </section>
