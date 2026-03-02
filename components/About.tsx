@@ -36,7 +36,7 @@ export default function About() {
   ];
 
   const team = [
-    { name: "Melanie G.", role: "Founder & CEO", img: "/mel.png" },
+    { name: "Melanie G.", role: "Founder & CEO", img: "/melanie-ceo.png" },
     { name: "Marianne A.", role: "Admin & Finance", img: "/marianne.png" },
   ];
 
