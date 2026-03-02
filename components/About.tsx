@@ -78,7 +78,7 @@ export default function About() {
               </span>
             </h3>
             <p className="text-gray-400 text-lg leading-relaxed mb-6 font-light">
-              Trueline Services is a family-operated Virtual Assistant company with seasoned experience supporting businesses across the US, UK, and Australia. We specialize in removing the bottlenecks that prevent founders from focusing on high-level strategy.
+              Truline Services is a family-operated Virtual Assistant company with seasoned experience supporting businesses across the US, UK, and Australia. We specialize in removing the bottlenecks that prevent founders from focusing on high-level strategy.
             </p>
             <p className="text-gray-400 text-lg leading-relaxed font-light">
               We hire with heart and train with purpose. Beyond skills, we value initiative and reliability. Every VA we deploy is prepared to contribute immediately, helping your business run smoothly while you focus on growth.

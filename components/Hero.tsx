@@ -28,9 +28,9 @@ export default function Hero() {
         </span>
 
         <h1 className="mb-8 text-5xl font-extrabold tracking-tight text-white lg:text-8xl">
-          Precision Support. Scalable Results <br />
+          Precision Support. <br /> Scalable Results. <br />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-ice to-white drop-shadow-[0_0_20px_rgba(185,255,217,0.4)]">
-            The Truline Standard
+            The Truline Standard.
           </span>
         </h1>
 

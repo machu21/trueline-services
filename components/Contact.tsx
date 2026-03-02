@@ -97,7 +97,8 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="text-xs text-gray-500 uppercase tracking-widest">Email us</p>
-                  <p className="text-gray-200 font-medium">admin@trulineservicesva.com</p>
+                  <p className="text-gray-200 font-medium">contact@trulineservicesva.com
+</p>
                 </div>
               </div>
 
@@ -107,7 +108,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="text-xs text-gray-500 uppercase tracking-widest">Contact</p>
-                  <p className="text-gray-200 font-medium">123123123</p>
+                  <p className="text-gray-200 font-medium">(818) 592-0093</p>
                 </div>
               </div>
 
