@@ -24,63 +24,74 @@ export default function About() {
       icon: <Globe className="w-6 h-6 text-ice" />,
     },
     {
-      title: "No Long-Term Contracts",
-      desc: "Access the top 1% of virtual professionals worldwide.",
+      title: "Flexible Scaling",
+      desc: "No long-term contracts; adapt support as you grow.",
       icon: <Receipt className="w-6 h-6 text-ice" />,
     },
     {
-      title: "Centralized Communication & Accountability",
-      desc: "Access the top 1% of virtual professionals worldwide.",
+      title: "Accountability",
+      desc: "Centralized communication and proactive management.",
       icon: <NfcIcon className="w-6 h-6 text-ice" />,
     },
+  ];
 
+  const team = [
+    { name: "Melanie G.", role: "Founder & CEO", img: "/mel.png" },
+    { name: "Marianne A.", role: "Admin & Finance", img: "/marianne.png" },
   ];
 
   return (
     <section id="about" className="py-24 bg-black border-t border-white/5 scroll-mt-20">
       <div className="container mx-auto px-6">
-        {/* Top Section: CEO Image & Content */}
-        <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
-          <div className="relative group max-w-md mx-auto lg:mx-0 w-full">
-            <div className="absolute -inset-1 bg-gradient-to-r from-ice to-transparent opacity-25 blur rounded-2xl group-hover:opacity-40 transition duration-1000"></div>
-            <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-white/10">
-              <img
-                src="/mel.png" // Replace with your actual saved filename
-                alt="Truline CEO"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="mt-6">
-              <h4 className="text-xl font-bold text-white">Mel</h4>
-              <p className="text-ice font-mono text-sm tracking-widest uppercase">Founder & CEO</p>
-            </div>
+        
+        {/* Leadership Section */}
+        <div className="grid lg:grid-cols-2 gap-16 items-start mb-24">
+          <div className="grid grid-cols-2 gap-4">
+            {team.map((member) => (
+              <div key={member.name} className="relative group overflow-hidden rounded-2xl">
+                <div className="absolute inset-0 bg-ice opacity-0 group-hover:opacity-10 transition duration-700 z-10"></div>
+                
+                {/* Image & Standard Crop */}
+                <div className="relative aspect-[3/4] overflow-hidden rounded-2xl border border-white/10 bg-white/5">
+                  <Image
+                    src={member.img}
+                    alt={member.name}
+                    fill
+                    className="object-cover object-top scale-100 group-hover:scale-105 transition duration-700 z-0"
+                  />
+                </div>
+
+                {/* Info & Subtle Fade In */}
+                <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 via-black/40 to-transparent z-20">
+                  <h4 className="text-xl font-bold text-white group-hover:text-ice transition duration-300">{member.name}</h4>
+                  <p className="text-gray-300 font-mono text-[10px] tracking-widest uppercase opacity-80 mt-1">{member.role}</p>
+                </div>
+              </div>
+            ))}
           </div>
 
-          <div>
-            <h2 className="text-ice font-mono text-sm tracking-widest uppercase mb-4 drop-shadow-[0_0_5px_rgba(185,255,217,0.3)]">
-              // Why Choose Us?
-            </h2>
+          <div className="lg:pt-4">
             <h3 className="text-4xl md:text-5xl font-bold text-white mb-8">
-              Reliability is our <br />
+              Why <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-ice to-white">
-                Primary Standard.
+                Choose Us?
               </span>
             </h3>
             <p className="text-gray-400 text-lg leading-relaxed mb-6 font-light">
-              Trueline Services doesn't just provide "help." We provide high-bandwidth operational partners. Our systems are designed to integrate seamlessly into your existing tech stack, from Slack to Salesforce.
+              Trueline Services is a family-operated Virtual Assistant company with seasoned experience supporting businesses across the US, UK, and Australia. We specialize in removing the bottlenecks that prevent founders from focusing on high-level strategy.
             </p>
             <p className="text-gray-400 text-lg leading-relaxed font-light">
-              We specialize in removing the bottlenecks that prevent founders from focusing on high-level strategy. When your operations are in a "True Line," your business moves faster.
+              We hire with heart and train with purpose. Beyond skills, we value initiative and reliability. Every VA we deploy is prepared to contribute immediately, helping your business run smoothly while you focus on growth.
             </p>
           </div>
         </div>
 
-        {/* Bottom Section: Feature Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* Feature Grid */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {pillars.map((pillar, index) => (
             <div
               key={index}
-              className="p-6 bg-white/[0.02] border border-white/5 rounded-xl hover:bg-ice/[0.03] hover:border-ice/30 transition-all duration-300 group"
+              className="p-8 bg-white/[0.02] border border-white/5 rounded-xl hover:bg-ice/[0.03] hover:border-ice/30 transition-all duration-300 group"
             >
               <div className="mb-4 group-hover:scale-110 group-hover:drop-shadow-[0_0_10px_rgba(185,255,217,0.5)] transition-all duration-300">
                 {pillar.icon}

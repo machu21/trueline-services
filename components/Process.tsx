@@ -60,7 +60,7 @@ export default function StrategicProcess() {
             viewport={{ once: true }}
             className="text-ice font-mono text-sm tracking-[0.4em] uppercase mb-4"
           >
-            // THE STRATEGIC EDGE
+            
           </motion.h2>
           <motion.h3 
             initial={{ opacity: 0, y: 20 }}
@@ -110,21 +110,6 @@ export default function StrategicProcess() {
             </motion.div>
           ))}
 
-          {/* Special Callout Card for 60% Savings */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            className="relative p-1 rounded-[2.5rem] bg-gradient-to-br from-ice/40 to-transparent"
-          >
-            <div className="bg-black w-full h-full rounded-[2.4rem] p-10 flex flex-col justify-center items-center text-center">
-               <h5 className="text-7xl font-black text-ice mb-2">60%</h5>
-               <p className="text-white font-bold uppercase tracking-widest text-sm mb-6">Cost Reduction</p>
-               <Link href="/consultation" className="text-ice hover:text-white transition-colors flex items-center gap-2 font-mono text-xs tracking-tighter">
-                  CALCULATE YOUR SAVINGS <ArrowRight className="w-3 h-3" />
-               </Link>
-            </div>
-          </motion.div>
         </div>
       </div>
     </section>

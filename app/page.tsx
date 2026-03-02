@@ -1,3 +1,5 @@
+//page.tsx
+
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
@@ -6,6 +8,7 @@ import About from "@/components/About";
 import Reveal from "@/components/Reveal";
 import Clients from "@/components/Clients";
 import Process from "@/components/Process";
+import MissionVision from "@/components/Mission-VIsion";
 
 
 export default function Home() {
@@ -31,9 +34,16 @@ export default function Home() {
         <Contact />
       </Reveal>
 
+            <Reveal>
+        <MissionVision />
+      </Reveal>
+
       <Reveal>
         <Clients />
       </Reveal>
+
+
+
 
 
 

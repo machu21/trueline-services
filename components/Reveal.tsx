@@ -4,10 +4,13 @@ import { motion } from "framer-motion";
 export default function Reveal({ children }: { children: React.ReactNode }) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 30 }} // Starts invisible and slightly lower
-      whileInView={{ opacity: 1, y: 0 }} // Fades in and slides up when seen
-      viewport={{ once: true, margin: "-100px" }} // Triggers once when 100px into view
-      transition={{ duration: 0.8, ease: "easeOut" }}
+      initial={{ opacity: 0, y: 40, filter: "blur(12px)" }}
+      whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+      viewport={{ once: true, margin: "-80px" }}
+      transition={{
+        duration: 0.9,
+        ease: [0.16, 1, 0.3, 1], // expo-out — fast settle, very smooth
+      }}
     >
       {children}
     </motion.div>

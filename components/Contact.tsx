@@ -37,8 +37,45 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="py-24 bg-black border-t border-white/5 scroll-mt-20">
-      <div className="container mx-auto px-6">
+    <section
+      id="contact"
+      className="py-24 border-t border-white/5 scroll-mt-20 relative overflow-hidden"
+      style={{
+        backgroundColor: "#000",
+        backgroundImage: `
+          url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25'%3E%3Cdefs%3E%3CradialGradient id='rg1' cx='15%25' cy='40%25' r='55%25'%3E%3Cstop offset='0%25' stop-color='%23b9ffd9' stop-opacity='0.07'/%3E%3Cstop offset='100%25' stop-color='transparent' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='rg2' cx='85%25' cy='65%25' r='45%25'%3E%3Cstop offset='0%25' stop-color='%2300bfff' stop-opacity='0.05'/%3E%3Cstop offset='100%25' stop-color='transparent' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23rg1)'/%3E%3Crect width='100%25' height='100%25' fill='url(%23rg2)'/%3E%3C/svg%3E"),
+          url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Ccircle cx='1' cy='1' r='1' fill='%23ffffff' fill-opacity='0.03'/%3E%3C/svg%3E")
+        `,
+        backgroundSize: "100% 100%, 60px 60px",
+        backgroundRepeat: "no-repeat, repeat",
+      }}
+    >
+      {/* Decorative top-left grid lines */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          backgroundImage: `linear-gradient(rgba(185,255,217,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(185,255,217,0.03) 1px, transparent 1px)`,
+          backgroundSize: "80px 80px",
+        }}
+      />
+
+      {/* Large ambient glow top-left */}
+      <div
+        className="absolute -top-40 -left-40 w-[500px] h-[500px] rounded-full pointer-events-none"
+        style={{
+          background: "radial-gradient(circle, rgba(185,255,217,0.06) 0%, transparent 70%)",
+        }}
+      />
+
+      {/* Large ambient glow bottom-right */}
+      <div
+        className="absolute -bottom-40 -right-20 w-[400px] h-[400px] rounded-full pointer-events-none"
+        style={{
+          background: "radial-gradient(circle, rgba(0,191,255,0.05) 0%, transparent 70%)",
+        }}
+      />
+
+      <div className="container mx-auto px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
 
           {/* Left Side: Text Content */}
@@ -125,8 +162,6 @@ export default function Contact() {
                       className="w-full bg-black border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-ice focus:ring-1 focus:ring-ice/30 transition-all placeholder:text-gray-700"
                     />
                   </div>
-
-
                 </div>
 
                 <div>
@@ -134,6 +169,7 @@ export default function Contact() {
                   <div className="relative">
                     <select name="service" className="w-full bg-black border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-ice focus:ring-1 focus:ring-ice/30 transition-all appearance-none cursor-pointer">
                       <option value="Executive Admin">Executive Admin</option>
+                      <option value="Executive Admin">General VA</option>
                       <option value="Technical Support">Technical Support</option>
                       <option value="Social Media Management">Social Media Management</option>
                       <option value="Lead Generation">Lead Generation</option>

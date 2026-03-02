@@ -44,13 +44,11 @@ export default function Services() {
 
       <div className="relative z-10">
         <div className="container mx-auto px-6 mb-12">
-          <h2 className="text-ice font-mono text-sm tracking-[0.4em] uppercase mb-4">
-            // OUR CORE EXPERTISE TAILORED
-          </h2>
+
           <h3 className="text-4xl md:text-6xl font-sans font-bold text-white tracking-tight leading-tight">
-            FOR YOUR MODERN <br />
+           OUR CORE EXPERTISE TAILORED FOR YOUR MODERN 
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-ice to-white drop-shadow-[0_0_10px_rgba(var(--ice-rgb),0.3)]">
-              BUSINESS.
+               BUSINESS.
             </span>
           </h3>
         </div>

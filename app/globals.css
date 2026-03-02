@@ -9,6 +9,11 @@
   --font-mono: var(--font-geist-mono), ui-mono, SFMono-Regular, monospace;
 }
 
+.container {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 :root {
   --background: #000000;
   --foreground: #ffffff;
