@@ -25,6 +25,10 @@ export default function Navbar() {
             Services
           </Link>
 
+          <Link href="/pricing" className="text-sm font-bold uppercase tracking-widest text-black/60 hover:text-black transition-colors">
+            Pricing
+          </Link>
+
           {/* Redesigned Minimalist Button */}
           <Link 
             href="/consultation" 
